@@ -1,0 +1,109 @@
+/*Responsiv webb design- box-sizing egenskapen används för att berätta för 
+webbläsaren vad storlekarna (bredd och höjd) ska innehålla.*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* ge stil till  header */
+.header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ge stil till  header */
+.body{
+    background-color: #f1f1f1;
+    padding: 0px;
+    text-align: center;
+}
+
+/* ge Stil till den översta navigeringsfältet */
+.navbar {
+    overflow: hidden;
+    background-color: #333;	
+}
+
+/* ge stil till navbar länkar*/
+.navbar a{
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+	border-style: outset;
+    border-color: coral;
+    border-width: 0px;
+}
+
+/* ändrar färg när man svävaren med en mouse*/
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Create three  columns that floats next to each other */
+.column {
+  float: left;
+  padding: 5px;
+}
+.left {
+  width: 49%;
+  background-color:#aaa;
+}
+
+.right {
+  width: 25%;
+  background-color:#ccc;
+}
+
+.middle {
+  width: 25%;
+  background-color:#bbb;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*Mediafråga är en CSS-teknik som introduceras i CSS3.
+Det använder @media-regeln att bara inkludera ett block av CSS-egenskaper om ett visst villkor är true.*/
+/* Responsiv layout - gör de två kolumnerna stack ovanpå varandra istället för varandra */
+@media (max-width: 600px) {
+    .column.left, .column.right, .column.middle {
+        width: 100%;
+    }
+}
+
+img {
+	/* att ge bilden en ram for products table*/
+    border-style: outset;
+    border-color: coral;
+    border-width: 2px;
+    border-radius: 10px;
+    padding: 1px;
+    width: 70px;
+	
+}
+
+div {
+	/*Att ge alla columner or rader i sidan en ram*/ 
+    border-style: outset;
+    border-color: coral;
+    border-width: 0px;
+}
+
+.footer {
+    background-color: #f1f1f1;
+    padding: 5px;
+    text-align: center;
+}
